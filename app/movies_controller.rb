@@ -84,7 +84,7 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  __
+  User.update_all "max_login_attempts = 3, must_change_password = 'true'"
 end
 
 def can_destroy_a_single_item
